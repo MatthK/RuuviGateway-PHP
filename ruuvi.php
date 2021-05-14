@@ -18,6 +18,7 @@
     $json = file_get_contents('php://input');
     
     // write the JSON to a text file
+    // Optional for debugging. Make sure the file exists and has the necessary permissions set (everyone read/write)
  	$fp = fopen('/volume1/path-of-website/ruuvi.txt', 'w');
 	fwrite($fp, $json."\n");
     fclose($fp);
@@ -34,6 +35,7 @@
     //$js_dat = $obj['Date'];
 
     // write the SQL String to a file - Open the file
+    // Optional for debugging. Make sure the file exists and has the necessary permissions set (everyone read/write)
 	$fpd = fopen('/volume1/path-of-website/ruuvid.txt', 'w');
 
     // Prepare the header of the insert
